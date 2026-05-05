@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2023"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": false,
+    "baseUrl": ".",
+    "paths": {
+      "@cavemem/compress": ["./packages/compress/src/index.ts"],
+      "@cavemem/config": ["./packages/config/src/index.ts"],
+      "@cavemem/core": ["./packages/core/src/index.ts"],
+      "@cavemem/embedding": ["./packages/embedding/src/index.ts"],
+      "@cavemem/storage": ["./packages/storage/src/index.ts"],
+      "@cavemem/hooks": ["./packages/hooks/src/index.ts"],
+      "@cavemem/installers": ["./packages/installers/src/index.ts"],
+      "@cavemem/mcp-server": ["./apps/mcp-server/src/server.ts"],
+      "@cavemem/worker": ["./apps/worker/src/server.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

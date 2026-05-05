@@ -1,0 +1,17 @@
+node_modules
+dist
+.cache
+*.log
+.DS_Store
+coverage
+.turbo
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+~/.cavemem
+.cavemem-dev
+.e2e/
+apps/cli/README.md
+apps/cli/LICENSE
+apps/cli/hooks-scripts/
