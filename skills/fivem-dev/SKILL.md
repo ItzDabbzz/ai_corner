@@ -8,7 +8,7 @@ description: >
   Use when developing, reviewing, or debugging any FiveM resource, Lua script,
   NUI interface, or framework-specific code. Not for general non-FiveM tasks.
 version: 1.0.0
-author: germanfndez
+author: germanfndez (original), ItzDabbzz (Redesign and orchestration)
 license: MIT
 metadata:
   hermes:
