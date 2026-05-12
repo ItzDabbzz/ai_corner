@@ -2,10 +2,11 @@
 name: mini-shai-hulud-defense
 description: >
   Protect JavaScript/TypeScript projects from mini shai-hulud (supply-chain) attacks
-  by enforcing minimum package release ages. Covers npm, pnpm, yarn, and bun.
+  by enforcing minimum package release ages, pinning exact dependency versions, and
+  locking the resolved tree. Covers npm, pnpm, yarn, and bun.
   Use when setting up a new JS/TS project, onboarding a repo, hardening CI,
-  or when the user asks about supply-chain security, dependency safety,
-  or "shai-hulud" / "package age" protection.
+  hardening a developer machine, or when the user asks about supply-chain security,
+  dependency safety, or "shai-hulud" / "package age" protection.
 ---
 
 # mini-shai-hulud-defense
