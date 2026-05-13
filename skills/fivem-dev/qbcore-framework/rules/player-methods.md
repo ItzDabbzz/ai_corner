@@ -25,6 +25,7 @@ Player.Functions.AddMoney('crypto', 10, 'crypto-mining')
 ```
 
 **Money Types**:
+
 - `cash` — Physical money
 - `bank` — Bank account
 - `crypto` — Cryptocurrency
@@ -346,12 +347,14 @@ local cid = Player.PlayerData.cid
 ## Best Practices
 
 1. **Always check if Player exists**:
+
    ```lua
    local Player = QBCore.Functions.GetPlayer(source)
    if not Player then return end
    ```
 
 2. **Check before removing money**:
+
    ```lua
    if Player.Functions.GetMoney('cash') >= price then
        Player.Functions.RemoveMoney('cash', price, 'bought-item')
@@ -361,6 +364,7 @@ local cid = Player.PlayerData.cid
    ```
 
 3. **Always provide reasons for money operations**:
+
    ```lua
    -- GOOD
    Player.Functions.AddMoney('cash', 500, 'mission-reward')
@@ -370,6 +374,7 @@ local cid = Player.PlayerData.cid
    ```
 
 4. **Check if item exists before operations**:
+
    ```lua
    local hasItem = Player.Functions.GetItemByName('water_bottle')
    if hasItem then
@@ -378,6 +383,7 @@ local cid = Player.PlayerData.cid
    ```
 
 5. **Cache Player object**:
+
    ```lua
    -- GOOD
    local Player = QBCore.Functions.GetPlayer(source)
@@ -390,6 +396,7 @@ local cid = Player.PlayerData.cid
    ```
 
 6. **Use appropriate money type**:
+
    ```lua
    -- Mission rewards → cash
    Player.Functions.AddMoney('cash', 500, 'mission-complete')

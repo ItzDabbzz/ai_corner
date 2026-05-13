@@ -1,9 +1,13 @@
 ---
 name: fivemanage
 description: Fivemanage SDK for FiveM — installation, screenshots (takeImage, takeServerImage, uploadImage), and centralized logs (Log, Info/Warn/Error). Use when integrating Fivemanage, capturing player screenshots, uploading images, or sending logs to the Fivemanage dashboard.
-author: germanfndez
+author: ItzDabbzz (expansion)
 version: 1.0.0
-mcp-server: projecthub
+license: MIT
+metadata:
+  hermes:
+    tags: [fivem, fivemanage, sdk, screenshots, logs]
+    related_skills: [fivem-dev]
 ---
 
 # Fivemanage SDK (FiveM)

@@ -54,7 +54,7 @@ If you find anything useful, please leave a ⭐
 ## 📁 Repository Structure <a name="repository_structure"></a>
 
 ```
-.
+DABZAICorner
 ├─ skills/      # 🔧 Reusable skills, patterns, workflows
 ├─ agents/      # 🤖 Agent definitions and specialized roles
 ├─ commands/    # ⚡ Command snippets and reusable task entrypoints
@@ -145,6 +145,10 @@ Add notes about how to use the system.
 ## ⛏️ Built Using <a name="built_using"></a>
 
 - [Markdown](https://www.markdownguide.org) — Because plain text deserves love too 💜
+- [Caveman 🪨](https://github.com/JuliusBrussee/caveman)
+- [Cavekit 🪨](https://github.com/JuliusBrussee/cavekit)
+- [Cavemem 🪨](https://github.com/JuliusBrussee/cavemem)
+- [Depwire](https://github.com/depwire/depwire)
 
 ---
 

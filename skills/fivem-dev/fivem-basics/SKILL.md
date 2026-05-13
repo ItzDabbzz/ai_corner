@@ -1,8 +1,13 @@
 ---
 name: fivem-basics
 description: FiveM resource structure, fxmanifest, client/server scripting, events. Use when creating or editing FiveM resources or Lua scripts, or when the user asks how FiveM works.
-author: germanfndez
+author: ItzDabbzz
 version: 1.0.0
+license: MIT
+metadata:
+  hermes:
+    tags: [fivem, lua, fxmanifest, client-server, events, exports]
+    related_skills: [fivem-dev]
 ---
 
 # FiveM basics
@@ -21,10 +26,10 @@ Best practices for FiveM — resources, manifest, client/server, events. Use thi
 Read individual rule files for detailed explanations and examples:
 
 - **rules/structure.md** — Resource structure and organization: scope, client/server separation, logical grouping, naming conventions.
-- **rules/fxmanifest.md** — Resource manifest (fxmanifest.lua): fx_version, game, client_scripts, server_script, files, dependencies.
+- **rules/fxmanifest.md** — Resource manifest (fxmanifest.lua): fx_version, game, client_scripts, server_script, files, dependencies, ox_lib integration.
 - **rules/client-server.md** — Client vs server scripts, shared code, communication patterns.
 - **rules/events.md** — Events in Lua: RegisterNetEvent, TriggerServerEvent, TriggerClientEvent, naming conventions, security.
 - **rules/exports.md** — Defining and consuming exports between resources.
 - **rules/debugging.md** — Server vs client (F8) logs; when to ask the user for F8 logs if there's no server-side error.
-- **rules/optimization.md** — Lua/FiveM optimization: locals, loops, natives (PlayerPedId, vector distance), state bags, security, readability, folder structure.
+- **rules/optimization.md** — Lua/FiveM optimization: locals, loops, natives (PlayerPedId, vector distance), state bags, cache, zones, security, readability, folder structure.
 - **rules/reference-links.md** — Official docs and natives reference.

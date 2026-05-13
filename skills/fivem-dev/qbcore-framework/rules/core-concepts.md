@@ -3,6 +3,7 @@
 ## Framework Architecture
 
 QBCore is a **comprehensive framework** that provides:
+
 - Player management and character system
 - Job and gang systems
 - Economy with multiple account types
@@ -153,7 +154,7 @@ local Player = QBCore.Functions.GetPlayerByCitizenId(citizenid)
 local Player = QBCore.Functions.GetPlayerByPhone(phone)
 ```
 
-### Player object contains PlayerData plus methods:
+### Player object contains PlayerData plus methods
 
 ```lua
 Player.PlayerData = {
@@ -333,7 +334,7 @@ QBCore.Config = {
 
 Recommended QBCore resource structure:
 
-```
+```md
 my-resource/
 ├── fxmanifest.lua
 ├── config.lua
@@ -351,6 +352,7 @@ my-resource/
 ## Best Practices
 
 1. **Always wait for QBCore on client**:
+
    ```lua
    CreateThread(function()
        while not QBCore do Wait(100) end
@@ -359,12 +361,14 @@ my-resource/
    ```
 
 2. **Check for nil on server**:
+
    ```lua
    local Player = QBCore.Functions.GetPlayer(source)
    if not Player then return end
    ```
 
 3. **Cache QBCore object once**:
+
    ```lua
    -- At resource start
    local QBCore = exports['qb-core']:GetCoreObject()
@@ -373,6 +377,7 @@ my-resource/
    ```
 
 4. **Use proper player retrieval**:
+
    ```lua
    -- By source
    local Player = QBCore.Functions.GetPlayer(source)
@@ -382,6 +387,7 @@ my-resource/
    ```
 
 5. **Access PlayerData correctly**:
+
    ```lua
    -- CLIENT
    local job = QBCore.PlayerData.job.name

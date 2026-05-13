@@ -14,6 +14,39 @@ The resource manifest is a file named `fxmanifest.lua` (or legacy `__resource.lu
 | **dependency** / **dependencies** | Other resources that must start before this one. |
 | **exports** | Client-side export names (Lua). |
 | **server_export** | Server-side export names. |
+| **ox_libs** | Eager-load ox_lib modules (e.g., `'locale'`, `'table'`, `'math'`). |
+
+## ox_lib Integration
+
+When using ox_lib, add it as a shared script:
+
+```lua
+shared_scripts {
+    '@ox_lib/init.lua',
+}
+```
+
+Or for a single shared script:
+
+```lua
+shared_script '@ox_lib/init.lua'
+```
+
+Eager-load specific modules:
+
+```lua
+ox_libs {
+    'locale',
+    'table',
+    'math',
+}
+```
+
+When using oxmysql, add it as a server script:
+
+```lua
+server_script '@oxmysql/lib/MySQL.lua'
+```
 
 ## Scripts
 
@@ -43,3 +76,41 @@ server_script 'server.lua'
 ## Full reference
 
 https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/
+
+## Modern Example with ox_lib
+
+```lua
+fx_version 'cerulean'
+use_experimental_fxv2_oal 'yes'
+lua54 'yes'
+game 'gta5'
+
+name 'my_resource'
+author 'Your Name'
+description 'My modern FiveM resource'
+version '1.0.0'
+
+shared_scripts {
+    '@ox_lib/init.lua',
+    'shared/config.lua',
+}
+
+client_scripts {
+    'client/main.lua',
+    'client/utils.lua',
+}
+
+server_scripts {
+    '@oxmysql/lib/MySQL.lua',
+    'server/main.lua',
+    'server/database.lua',
+}
+
+ox_libs {
+    'locale',
+    'table',
+    'math',
+}
+
+dependency 'ox_lib'
+```

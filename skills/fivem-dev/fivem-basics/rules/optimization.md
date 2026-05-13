@@ -136,11 +136,58 @@ print("Execution time (ms):", GetGameTimer() - startTime)
 
 ### Avoid overusing network events
 
-For frequent sync, prefer shared state (state bags, entity state) instead of spamming `TriggerServerEvent` / `TriggerClientEvent`.
+For frequent sync, prefer shared state (state bags, entity state, cache) instead of spamming `TriggerServerEvent` / `TriggerClientEvent`.
 
 ```lua
 Entity(playerPed).state:set('exampleData', 123, true)
 local data = Entity(playerPed).state.exampleData
+```
+
+### Use ox_lib cache instead of repeated natives
+
+```lua
+-- Don't: calling native every frame
+local ped = PlayerPedId()
+
+-- Do: use cached value
+local ped = cache.ped
+local vehicle = cache.vehicle
+local weapon = cache.weapon
+```
+
+### Use ox_lib zones/points instead of polling loops
+
+```lua
+-- Don't: distance check every frame
+CreateThread(function()
+    while true do
+        local dist = #(GetEntityCoords(PlayerPedId()) - shopCoords)
+        if dist < 2.0 then
+            -- show prompt
+        end
+        Wait(0)
+    end
+end)
+
+-- Do: use ox_lib point
+local point = lib.points.new({
+    coords = shopCoords,
+    distance = 5,
+})
+
+function point:onEnter()
+    lib.showTextUI('[E] - Open Shop')
+end
+
+function point:onExit()
+    lib.hideTextUI()
+end
+
+function point:nearby()
+    if self.currentDistance < 2 and IsControlJustReleased(0, 38) then
+        OpenShop()
+    end
+end
 ```
 
 ### Optimize data transmission

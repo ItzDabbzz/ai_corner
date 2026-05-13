@@ -1,6 +1,13 @@
 ---
 name: fivem-nui
 description: FiveM NUI (New User Interface) development for creating graphical elements and user interfaces. Use when creating or editing NUI interfaces, HTML/CSS/JS for FiveM, or handling NUI callbacks.
+author: ItzDabbzz
+version: 1.0.0
+license: MIT
+metadata:
+  hermes:
+    tags: [fivem, nui, html, css, javascript, ui]
+    related_skills: [fivem-dev]
 ---
 
 # FiveM NUI Development

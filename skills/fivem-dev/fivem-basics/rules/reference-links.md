@@ -12,5 +12,10 @@ Use these when you need detailed or up-to-date information.
 | **Lua client functions** | https://docs.fivem.net/docs/scripting-reference/runtimes/lua/client-functions/ |
 | **Lua server functions** | https://docs.fivem.net/docs/scripting-reference/runtimes/lua/server-functions/ |
 | **Events list** | https://docs.fivem.net/docs/scripting-reference/events/list/ |
+| **ox_lib Docs** | https://overextended.dev/ox_lib |
+| **ox_inventory Docs** | https://overextended.dev/ox_inventory |
+| **ox_target Docs** | https://overextended.dev/ox_target |
+| **oxmysql Docs** | https://overextended.dev/oxmysql |
+| **ox_doorlock Docs** | https://overextended.dev/ox_doorlock |
 
 When the user needs a specific native or deeper reference, point them to the natives page or the scripting manual.

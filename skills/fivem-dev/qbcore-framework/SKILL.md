@@ -1,9 +1,13 @@
 ---
 name: qbcore-framework
 description: QBCore Framework for FiveM - Player management, jobs, gangs, economy, inventory. Use when creating QBCore resources or working with Player object, PlayerData, QBCore functions.
-author: germanfndez
+author: ItzDabbzz (expansion)
 version: 1.0.0
-mcp-server: projecthub
+license: MIT
+metadata:
+  hermes:
+    tags: [fivem, qbcore, framework, playerdata, jobs, gangs, economy]
+    related_skills: [fivem-dev]
 ---
 
 # QBCore Framework Development

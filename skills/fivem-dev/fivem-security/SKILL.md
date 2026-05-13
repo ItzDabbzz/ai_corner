@@ -1,6 +1,13 @@
 ---
 name: fivem-security
-description: Best practices and rules for securing FiveM resources against cheaters and exploits. Use this skill when writing or reviewing server-side and client-side code to ensure malicious events, unauthorized entity creations, and client trust issues are prevented. Focuses on strict server authority and safe event handling.
+description: Best practices and rules for securing FiveM resources against cheaters and exploits. Use when writing or reviewing server-side and client-side code to ensure malicious events, unauthorized entity creations, and client trust issues are prevented. Focuses on strict server authority and safe event handling.
+author: ItzDabbzz
+version: 1.0.0
+license: MIT
+metadata:
+  hermes:
+    tags: [fivem, security, anti-cheat, server-authority, events]
+    related_skills: [fivem-dev]
 ---
 
 # 🛡️ FiveM Security & Anti-Exploit Principles

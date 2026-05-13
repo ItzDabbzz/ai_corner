@@ -1,6 +1,6 @@
 # QBCore Best Practices
 
-Based on official QBCore documentation: https://docs.qbcore.org
+Based on official QBCore documentation: <https://docs.qbcore.org>
 
 ## Naming Conventions
 
@@ -324,6 +324,7 @@ my-resource/
 ## QBCore Specific Best Practices
 
 1. **Cache QBCore object once**:
+
    ```lua
    -- Resource start
    local QBCore = exports['qb-core']:GetCoreObject()
@@ -332,12 +333,14 @@ my-resource/
    ```
 
 2. **Check for Player before operations**:
+
    ```lua
    local Player = QBCore.Functions.GetPlayer(source)
    if not Player then return end
    ```
 
 3. **Use callbacks for client-to-server data requests**:
+
    ```lua
    -- SERVER
    QBCore.Functions.CreateCallback('shop:canAfford', function(source, cb, itemName)
@@ -357,12 +360,14 @@ my-resource/
    ```
 
 4. **Always provide reasons for money operations**:
+
    ```lua
    Player.Functions.AddMoney('cash', 500, 'mission-reward')
    Player.Functions.RemoveMoney('bank', 1000, 'bought-house')
    ```
 
 5. **Cache Player object when using multiple times**:
+
    ```lua
    -- GOOD
    local Player = QBCore.Functions.GetPlayer(source)
@@ -375,6 +380,7 @@ my-resource/
    ```
 
 6. **Use GetPlayerData on client**:
+
    ```lua
    -- CLIENT
    local PlayerData = QBCore.Functions.GetPlayerData()

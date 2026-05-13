@@ -1,14 +1,15 @@
 ---
 name: fivem-dev
 description: >
-  Master skill for FiveM development. Orchestrates 7 sub-skills covering
+  Master skill for FiveM development. Orchestrates 9 sub-skills covering
   FiveM fundamentals (fxmanifest, client/server, events, exports), Lua best practices,
   NUI (HTML/CSS/JS UI), security (server authority, event validation), Fivemanage SDK
-  (screenshots, logs), ESX Framework, and QBCore Framework.
+  (screenshots, logs), ESX Framework, QBCore Framework, ox_lib (Overextended UI and utilities),
+  and Overextended resources (ox_inventory, ox_target, ox_doorlock).
   Use when developing, reviewing, or debugging any FiveM resource, Lua script,
   NUI interface, or framework-specific code. Not for general non-FiveM tasks.
 version: 1.0.0
-author: germanfndez (original), ItzDabbzz (Redesign and orchestration)
+author: ItzDabbzz
 license: MIT
 metadata:
   hermes:
@@ -33,6 +34,8 @@ FiveM is a modification framework for GTA V enabling multiplayer servers with cu
 - Hardening resources against cheaters/exploiters
 - Integrating Fivemanage (screenshots, logs)
 - Working with ESX or QBCore player data, jobs, inventory, economy
+- Using ox_lib for UI (notifications, menus, progress bars, input dialogs, etc.)
+- Working with ox_inventory, ox_target, or ox_doorlock exports and configuration
 
 ## When NOT to Use
 
@@ -50,6 +53,8 @@ FiveM is a modification framework for GTA V enabling multiplayer servers with cu
 | **fivemanage** | `fivemanage/SKILL.md` | SDK install, screenshots (takeImage, takeServerImage), logs (Log/Info/Warn/Error) |
 | **esx-framework** | `esx-framework/SKILL.md` | ESX Legacy: xPlayer, PlayerData, jobs, economy, inventory, weapons, callbacks |
 | **qbcore-framework** | `qbcore-framework/SKILL.md` | QBCore: Player object, PlayerData, jobs, gangs, economy, inventory, callbacks |
+| **ox_lib** | `ox_lib/SKILL.md` | Overextended ox_lib: UI elements (notify, menu, context, input, progress, radial, textUI, skillcheck), callbacks, cache, zones, points, keybinds, utilities, oxmysql |
+| **ox_resources** | `ox_resources/SKILL.md` | Overextended resources: ox_inventory (exports, items, shops, stashes), ox_target (targeting system), ox_doorlock (door locking) |
 
 ## Workflow
 
@@ -77,6 +82,9 @@ FiveM is a modification framework for GTA V enabling multiplayer servers with cu
 - FiveM Docs: https://docs.fivem.net/docs/
 - Cfx.re Forums: https://forum.cfx.re/
 - Lua 5.4 Reference: https://www.lua.org/manual/5.4/
+- ox_lib Docs: https://overextended.dev/ox_lib
+- ox_inventory Docs: https://overextended.dev/ox_inventory
+- ox_target Docs: https://overextended.dev/ox_target
 
 ## Common Pitfalls
 
@@ -90,6 +98,8 @@ FiveM is a modification framework for GTA V enabling multiplayer servers with cu
 8. **ESX vs QBCore mix-up** — They have similar concepts but different APIs. Confirm which framework the resource targets.
 9. **Hardcoding framework calls** — Use abstraction layers when possible to support both ESX and QBCore.
 10. **Ignoring F8 logs** — Client errors only appear in the in-game console (F8). Ask the user for them when debugging client issues.
+11. **Not importing ox_lib** — Add `@ox_lib/init.lua` to shared_scripts when using ox_lib features.
+12. **Using legacy UI systems** — Prefer ox_lib over ESX/QBCore native menus, notifications, and progress bars.
 
 ## Verification Checklist
 
@@ -102,3 +112,5 @@ FiveM is a modification framework for GTA V enabling multiplayer servers with cu
 - [ ] NUI has `SetNuiFocus` + `SendNUIMessage` patterns correct
 - [ ] Framework-specific code uses official APIs (ESX/QBCore)
 - [ ] Security rules from `fivem-security` applied to all event handlers
+- [ ] ox_lib imported in `fxmanifest.lua` when using ox_lib features
+- [ ] oxmysql imported in `fxmanifest.lua` when using database functions

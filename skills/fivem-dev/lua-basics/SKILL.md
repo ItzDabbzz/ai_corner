@@ -1,9 +1,13 @@
 ---
 name: lua-basics
 description: Effective Lua programming for FiveM - functions, tables, variables, conditionals, error handling. Use when writing or reviewing Lua code for FiveM resources.
-author: germanfndez
+author: ItzDabbzz (expansion)
 version: 1.0.0
-mcp-server: projecthub
+license: MIT
+metadata:
+  hermes:
+    tags: [fivem, lua, functions, tables, variables, conditionals, errors]
+    related_skills: [fivem-dev]
 ---
 
 # Lua Basics
