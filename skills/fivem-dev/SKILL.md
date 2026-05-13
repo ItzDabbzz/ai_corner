@@ -8,10 +8,10 @@ description: >
   and Overextended resources (ox_inventory, ox_target, ox_doorlock).
   Use when developing, reviewing, or debugging any FiveM resource, Lua script,
   NUI interface, or framework-specific code. Not for general non-FiveM tasks.
-version: 1.0.0
-author: ItzDabbzz
 license: MIT
 metadata:
+  version: 1.0.0
+  author: ItzDabbzz
   hermes:
     tags: [fivem, gta5, lua, nui, esx, qbcore, gaming, security]
     related_skills: []
