@@ -7,6 +7,10 @@ description: >
   Use when setting up a new JS/TS project, onboarding a repo, hardening CI,
   hardening a developer machine, or when the user asks about supply-chain security,
   dependency safety, or "shai-hulud" / "package age" protection.
+metadata:
+  author: ItzDabbzz
+  version: "1.0"
+  license: MIT
 ---
 
 # mini-shai-hulud-defense
