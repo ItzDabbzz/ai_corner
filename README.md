@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h3 align="center">🤖 DABZ AI Corner</h3>
+<h3 align="center">DABZ AI Corner</h3>
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/status-active-success.svg" alt="Status"></a>
@@ -16,72 +16,84 @@
 ---
 
 <p align="center">
-  A curated collection of AI skills, agents, prompts, commands, notes, and reusable workflows.
+  A collection of AI skills, agents, prompts, commands, notes, and workflows I use regularly.
   <br>
 </p>
 
-## 📝 Table of Contents
+## Table of Contents
 
-- [📝 Table of Contents](#-table-of-contents)
-- [🧐 About ](#-about-)
-- [📁 Repository Structure ](#-repository-structure-)
-- [🏁 Getting Started ](#-getting-started-)
+- [Table of Contents](#table-of-contents)
+- [About](#about)
+- [Repository Structure](#repository-structure)
+- [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
+    - [Skills](#skills)
+    - [Development / Power User Install](#development--power-user-install)
   - [Addons Usage Pattern](#addons-usage-pattern)
-  - [Vendor / Upstream Content 📦 ](#vendor--upstream-content--)
-    - [➕ Add upstream repo](#-add-upstream-repo)
-    - [🔄 Update upstream repo](#-update-upstream-repo)
-- [🎈 Usage ](#-usage-)
-- [⛏️ Built Using ](#️-built-using-)
-- [✍️ Authors ](#️-authors-)
-- [🎉 Acknowledgements ](#-acknowledgements-)
+  - [Vendor / Upstream Content](#vendor--upstream-content)
+    - [Add upstream repo](#add-upstream-repo)
+    - [Update upstream repo](#update-upstream-repo)
+- [Built Using](#built-using)
+- [Authors](#authors)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
-## 🧐 About <a name="about"></a>
+## About
 
-This repository is where I keep the AI-related tooling and patterns I use regularly.
+This repository contains the AI-related tooling and patterns I rely on across projects.
 
-It acts as both a **personal working library** and a **curated reference** of practical pieces that are useful across projects.
+I maintain some pieces locally and pull others from upstream repositories, keeping them updateable rather than forking permanently. Not everything is original work.
 
-Not everything here is authored from scratch. Some pieces are maintained locally, while others are pulled from upstream repositories and kept updateable.
-
-If you find anything useful, please leave a ⭐
+If this is useful, leave a star.
 
 ---
 
-## 📁 Repository Structure <a name="repository_structure"></a>
+## Repository Structure
 
-```
+```text
 DABZAICorner
-├─ skills/      # 🔧 Reusable skills, patterns, workflows
-├─ agents/      # 🤖 Agent definitions and specialized roles
-├─ commands/    # ⚡ Command snippets and reusable task entrypoints
-├─ prompts/     # 💬 Prompts and prompt collections
-├─ notes/       # 📓 Reference notes, architecture notes, RAG notes, research
-├─ addons/      # 🧩 Extensions, overrides, and custom wrappers for vendor content
-└─ vendor/      # 📦 Upstream external repositories tracked via git subtree
+├─ skills/      # Reusable skills, patterns, workflows
+├─ agents/      # Agent definitions and specialized roles
+├─ commands/    # Command snippets and reusable task entrypoints
+├─ prompts/     # Prompts and prompt collections
+├─ notes/       # Reference notes, architecture notes, RAG notes, research
+├─ addons/      # Extensions, overrides, and custom wrappers for vendor content
+└─ vendor/      # Upstream external repositories tracked via git subtree
 ```
 
 ---
 
-## 🏁 Getting Started <a name="getting_started"></a>
+## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project running locally for development and testing.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
-
-- [Git](https://git-scm.com/downloads)
+- [Bun](https://bun.sh) or [Node.js](https://nodejs.org)
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+#### Skills
+
+The quickest way to get started is to install the skills directly:
 
 ```bash
-# Clone the repository
+bunx skills add ItzDabbzz/ai_corner
+```
+
+```bash
+npx skills add ItzDabbzz/ai_corner
+```
+
+> Learn more about the `skills` CLI at [skills.sh](https://www.skills.sh/) or in the [GitHub docs](https://github.com/vercel-labs/skills/blob/main/README.md).
+
+#### Development / Power User Install
+
+Clone the repository for development or local customization:
+
+```bash
 git clone https://github.com/ItzDabbzz/ai_corner.git
 ```
 
@@ -97,71 +109,63 @@ Install.bat
 
 ### Addons Usage Pattern
 
-Use `addons/` for:
+Use `addons/` to extend vendor skills without modifying them:
 
-- 🔧 Extending vendor skills without editing them
-- 🎭 Wrapping upstream agents with custom logic
-- 🔗 Composing multiple vendor skills into workflows
-- ⚙️ Environment-specific overrides
+- Extend vendor skills without editing the originals
+- Wrap upstream agents with custom logic
+- Compose multiple vendor skills into workflows
+- Add environment-specific overrides
 
-**Example:**
+Example structure:
 
-```
+```text
 vendor/vercel-agent-skills/
 addons/vercel-agent-skills/overrides/
 ```
 
-### Vendor / Upstream Content 📦 <a name="vendor_upstream"></a>
+### Vendor / Upstream Content
 
-External repositories are stored in `vendor/`.
+External repositories live in `vendor/` and are managed with git subtree, which embeds them while allowing updates.
 
-These are managed using **git subtree**, which embeds upstream repositories while allowing updates.
-
-#### ➕ Add upstream repo
+#### Add upstream repo
 
 ```bash
 git subtree add --prefix=vendor/vercel-agent-skills   https://github.com/vercel-labs/agent-skills.git main --squash
 ```
 
-#### 🔄 Update upstream repo
+#### Update upstream repo
 
 ```bash
 git subtree pull --prefix=vendor/vercel-agent-skills   https://github.com/vercel-labs/agent-skills.git main --squash
 ```
 
-> ⚠️ **Notes:**
-> - `vendor/` is for upstream imports only
-> - Do not modify vendor content if you want easy updates
-> - Custom work goes in `skills/`, `agents/`, `prompts/`, or `addons/`
+Important notes:
+
+- `vendor/` is for upstream imports only
+- Do not modify vendor content if you want easy updates
+- Put custom work in `skills/`, `agents/`, `prompts/`, or `addons/`
 
 ---
 
-## 🎈 Usage <a name="usage"></a>
+## Built Using
 
-Add notes about how to use the system.
-
----
-
-## ⛏️ Built Using <a name="built_using"></a>
-
-- [Markdown](https://www.markdownguide.org) — Because plain text deserves love too 💜
-- [Caveman 🪨](https://github.com/JuliusBrussee/caveman)
-- [Cavekit 🪨](https://github.com/JuliusBrussee/cavekit)
-- [Cavemem 🪨](https://github.com/JuliusBrussee/cavemem)
+- [Markdown](https://www.markdownguide.org) — Plain text deserves respect
+- [Caveman](https://github.com/JuliusBrussee/caveman) - Save Token, Speak Like Man!
+- [Cavekit](https://github.com/JuliusBrussee/cavekit) - SDD
+- [Cavemem](https://github.com/JuliusBrussee/cavemem) - Remember now, or later.
 - [Depwire](https://github.com/depwire/depwire)
 
 ---
 
-## ✍️ Authors <a name="authors"></a>
+## Authors
 
-- **[@ItzDabbzz](https://github.com/ItzDabbzz)** — Idea & Initial work
+- [@ItzDabbzz](https://github.com/ItzDabbzz) — Initial work
 
-See also the list of [contributors](https://github.com/ItzDabbzz/ai_corner/contributors) who participated in this project.
+See the [contributors](https://github.com/ItzDabbzz/ai_corner/contributors) list for everyone who participated.
 
 ---
 
-## 🎉 Acknowledgements <a name="acknowledgements"></a>
+## Acknowledgements
 
-- 🎩 Hat tip to anyone whose code was used
-- 💡 Inspiration
-- 📚 References
+- Thanks to anyone whose code was used
+- References and inspiration from the projects listed above
