@@ -18,6 +18,11 @@
 <p align="center">
   A collection of AI skills, agents, prompts, commands, notes, and workflows I use regularly.
   <br>
+  
+```bash
+npx skills add ItzDabbzz/ai_corner
+```
+  
 </p>
 
 ## Table of Contents
