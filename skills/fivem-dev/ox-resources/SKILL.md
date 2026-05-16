@@ -1,13 +1,12 @@
 ---
 name: ox-resources
-description: Overextended resources for FiveM — ox_inventory (slot-based inventory with metadata), ox_target (targeting/third-eye system), and ox_doorlock (door locking system). Use when working with these specific Overextended resources, their exports, events, configuration, or integration with ESX/QBCore frameworks.
-author: ItzDabbzz
-version: 1.0.0
+description: Overextended resources for FiveM. Covers ox_inventory (slot-based inventory with metadata), ox_target (targeting/third-eye system), and ox_doorlock (door locking). Use when working with these Overextended resources, their exports, configuration, or framework integration.
 license: MIT
+compatibility: FiveM with Overextended resources (ox_inventory, ox_target, ox_doorlock)
 metadata:
   hermes:
     tags: [fivem, ox_inventory, ox_target, ox_doorlock, overextended, inventory, targeting]
-    related_skills: [fivem-dev, ox_lib]
+    related_skills: [fivem-dev, ox-lib]
 ---
 
 # Overextended Resources

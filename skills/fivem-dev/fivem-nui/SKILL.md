@@ -1,10 +1,11 @@
 ---
 name: fivem-nui
-description: FiveM NUI (New User Interface) development for creating graphical elements and user interfaces. Use when creating or editing NUI interfaces, HTML/CSS/JS for FiveM, or handling NUI callbacks.
-author: ItzDabbzz
-version: 1.0.0
+description: FiveM NUI development for creating HTML/CSS/JS graphical interfaces. Covers setup, fullscreen UIs, callbacks, messaging, and focus management. Use when building or debugging in-game UI elements.
 license: MIT
+compatibility: FiveM framework for GTA V
 metadata:
+  version: "1.0.0"
+  author: ItzDabbzz
   hermes:
     tags: [fivem, nui, html, css, javascript, ui]
     related_skills: [fivem-dev]
@@ -12,7 +13,7 @@ metadata:
 
 # FiveM NUI Development
 
-Best practices for FiveM NUI development — fullscreen UIs, NUI callbacks, messaging, and UI integration. Use this skill whenever you are dealing with FiveM user interfaces to obtain domain-specific knowledge.
+HTML/CSS/JS UI development in FiveM with callbacks, messaging, and focus management.
 
 ## When to use
 

@@ -1,13 +1,10 @@
 ---
 name: lua-basics
-description: >
-  Lua 5.4 reference for FiveM (CfxLua). Covers types, operators, control structures,
-  variables, functions, tables, metatables, object patterns, errors, strings,
-  math/bit32, modules, and performance. Use when writing, reviewing, or debugging
-  Lua code in FiveM resources.
+description: Lua 5.4 reference for FiveM (CfxLua). Covers types, operators, control structures, variables, functions, tables, metatables, object patterns, errors, strings, math, and performance. Use when writing, reviewing, or debugging Lua code in FiveM resources.
 license: MIT
+compatibility: FiveM (CfxLua) - Lua 5.4 subset
 metadata:
-  version: 1.0.2
+  version: "1.0.2"
   author: ItzDabbzz
   hermes:
     tags: [fivem, lua, cfxlua, patterns, performance]

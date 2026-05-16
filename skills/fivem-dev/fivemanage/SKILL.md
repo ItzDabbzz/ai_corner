@@ -1,18 +1,19 @@
 ---
 name: fivemanage
-description: Fivemanage SDK for FiveM — installation, screenshots (takeImage, takeServerImage, uploadImage), and centralized logs (Log, Info/Warn/Error). Use when integrating Fivemanage, capturing player screenshots, uploading images, or sending logs to the Fivemanage dashboard.
-author: ItzDabbzz (expansion)
-version: 1.0.0
+description: Fivemanage SDK for FiveM. Covers installation, screenshots (takeImage, takeServerImage, uploadImage), and centralized logging (Log, Info, Warn, Error). Use when integrating Fivemanage into FiveM resources.
 license: MIT
+compatibility: FiveM framework for GTA V; requires Fivemanage account and API key
 metadata:
+  version: "1.0.0"
+  author: ItzDabbzz (expansion)
   hermes:
     tags: [fivem, fivemanage, sdk, screenshots, logs]
     related_skills: [fivem-dev]
 ---
 
-# Fivemanage SDK (FiveM)
+# Fivemanage SDK
 
-Installation, images, and logs for the Fivemanage SDK on FiveM. Use this skill when integrating Fivemanage, capturing screenshots, or sending logs. Docs: https://docs.fivemanage.com/fivem-sdk/installation
+Installation, screenshots, image uploads, and centralized logging for Fivemanage on FiveM.
 
 ## When to use
 
