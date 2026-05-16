@@ -36,9 +36,19 @@ FiveM is a modification framework for GTA V enabling multiplayer servers with cu
 - Working with ESX or QBCore player systems
 - Using ox_lib or other Overextended resources
 
-## Sub-Skills
+## Topic Areas
 
-This skill delegates deep work to 9 focused sub-skills. See [Sub-Skills Reference](references/subskills.md) for the complete directory and workflow.
+Load the relevant topic file when the user's task matches:
+
+- **Resource structure, fxmanifest, client/server, events, exports** → Read `fivem-basics/SKILL.md` then `fivem-basics/rules/`
+- **Lua syntax, tables, functions, metatables, performance** → Read `lua-basics/SKILL.md` then `lua-basics/rules/`
+- **NUI setup, HTML/CSS/JS interfaces, callbacks** → Read `fivem-nui/SKILL.md` then `fivem-nui/rules/`
+- **Security, anti-exploit, server authority, event validation** → Read `fivem-security/SKILL.md` then `fivem-security/rules/`
+- **Fivemanage SDK, screenshots, logging** → Read `fivemanage/SKILL.md` then `fivemanage/rules/`
+- **ESX player data, jobs, economy, inventory** → Read `esx-framework/SKILL.md` then `esx-framework/rules/`
+- **QBCore player data, jobs, gangs, economy** → Read `qbcore-framework/SKILL.md` then `qbcore-framework/rules/`
+- **ox_lib UI, callbacks, cache, zones** → Read `ox-lib/SKILL.md` then `ox-lib/rules/`
+- **ox_inventory, ox_target, ox_doorlock** → Read `ox-resources/SKILL.md` then `ox-resources/rules/`
 
 ## Golden Rules
 
@@ -54,7 +64,6 @@ Plus 5 more in the full reference.
 
 ## Resources
 
-- [Sub-Skills Directory](references/subskills.md)
 - [Golden Rules](references/golden-rules.md)
 - [Quick Reference Links](references/reference-links.md)
 - [Common Pitfalls](references/common-pitfalls.md)

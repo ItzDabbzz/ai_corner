@@ -1,16 +1,3 @@
----
-name: fivem-basics
-description: FiveM resource structure, fxmanifest, client/server scripting, events, exports, and debugging. Use when creating or editing FiveM resources or Lua scripts, or when working with resource structure and communication patterns.
-license: MIT
-compatibility: FiveM framework for GTA V
-metadata:
-  version: "1.0.0"
-  author: ItzDabbzz
-  hermes:
-    tags: [fivem, lua, fxmanifest, client-server, events, exports]
-    related_skills: [fivem-dev]
----
-
 # FiveM Basics
 
 Resource structure, manifest configuration, client/server scripting, events, and exports.

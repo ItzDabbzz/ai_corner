@@ -1,14 +1,3 @@
----
-name: ox-lib
-description: Overextended ox_lib for FiveM. Covers UI elements (notifications, menus, progress, input, context, radial, textUI), callbacks, cache, zones, points, keybinds, locales, and utility functions. Use when building modern FiveM UIs or replacing legacy framework UI systems.
-license: MIT
-compatibility: FiveM with ox_lib (Overextended)
-metadata:
-  hermes:
-    tags: [fivem, ox_lib, overextended, ui, notifications, menus, callbacks, cache, zones]
-    related_skills: [fivem-dev]
----
-
 # ox_lib (Overextended)
 
 Modern FiveM library providing reusable modules, UI elements, and utility functions. Replaces legacy framework UI systems and simplifies common development patterns.

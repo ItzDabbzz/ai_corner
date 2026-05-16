@@ -200,7 +200,7 @@ After the 4 steps, report:
 ## Verification Checklist
 
 - [ ] `~/.npmrc` has `min-release-age=7`, `minimum-release-age=10080`, `save-exact=true`
-- [ ] `~/.bunfig.toml` has `[install] minimumReleaseAge = 604800`
+- [ ] `~/.bunfig.toml` (if exists) has `[install] minimumReleaseAge = 604800`
 - [ ] `package.json` has zero `^` or `~` prefixes in all dependency blocks
 - [ ] Lockfile is committed and matches the exact versions in `package.json`
 - [ ] CI pipeline applies the same config before install

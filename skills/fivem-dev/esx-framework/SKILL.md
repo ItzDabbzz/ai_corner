@@ -1,15 +1,3 @@
----
-name: esx-framework
-description: ESX Legacy Framework for FiveM. Covers player management, xPlayer object, jobs, economy, inventory, weapons, and server callbacks. Use when creating ESX resources or working with ESX player systems and functions.
-license: MIT
-compatibility: FiveM with ESX Legacy framework
-metadata:
-  version: "1.0.0"
-  author: ItzDabbzz (expansion)
-  hermes:
-    tags: [fivem, esx, framework, xplayer, jobs, economy, inventory]
-    related_skills: [fivem-dev]
----
 # ESX Framework Development
 
 Comprehensive guide for ESX Legacy Framework — player management, jobs, economy, inventory, and weapons.

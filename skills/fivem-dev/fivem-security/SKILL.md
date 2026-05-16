@@ -1,16 +1,3 @@
----
-name: fivem-security
-description: Security best practices for FiveM resources. Covers server authority, event validation, parameter checking, distance verification, and anti-exploit patterns. Use when writing or reviewing code that handles state changes or player interactions.
-license: MIT
-compatibility: FiveM framework for GTA V
-metadata:
-  version: "1.0.0"
-  author: ItzDabbzz
-  hermes:
-    tags: [fivem, security, anti-cheat, server-authority, events]
-    related_skills: [fivem-dev]
----
-
 # FiveM Security and Anti-Exploit Principles
 
 Architectural guidance for securing FiveM resources against cheats, unauthorized events, and malicious data manipulation. Core principle: NEVER TRUST THE CLIENT. 
